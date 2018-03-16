@@ -1,0 +1,62 @@
+ext {
+    cfgs = [
+            compileSdkVersion : 24,
+            buildToolsVersion : "26.0.2",
+            applicationId     : "com.game.sdk.jingyue163",
+            minSdkVersion     : 15,
+            targetSdkVersion  : 24,
+            versionCode       : 7,
+            versionName       : "7.1",
+
+            //信鸽
+            //识别一个应用的唯一标识，不能更改，需要配置到客户端SDK中，调用后台接口时也需要提供。
+            access_id   : "2100262543",
+            //客户端鉴权密钥，与ACCESS ID共同验证以确定调用合法。需要配置到客户端SDK中，无法更换。
+            access_key  : "AY6ARY714A6Z",
+            //用于验证API调用与ACCESS KEY共同验证以确定调用合法。如果泄露，需要立即更换并重新配置客户端SDK。
+            secret_key  : "1850e177925ae4beba951578f318862e",
+
+            //腾讯地图
+            TencentMapSDK : "PY7BZ-7GO34-M7FUK-XFKUR-YQ6P2-HJF5T",
+
+            //open version control
+            kotlin_version    : "1.0.6",
+            androidSupportVersion  : "25.3.1",
+            retrofit_version  : "2.3.0",
+            stetho_version    : "1.4.0",
+            rxjava_version    : "2.0.1",
+            rxlife_version    : "2.1.0",
+            dagger_version    : "2.11",
+            butterknife       : '8.4.0',
+            eventBus          : '3.0.0',
+            gson              : '2.8.1',
+            glide             : '3.8.0',
+            ultraPtr          : '1.0.6',
+            slideTab          : '1.5.0',
+            flycoTabLayout_Lib : '2.0.2@aar',
+            photoview          : '1.2.4'
+
+    ]
+    libs = [
+            'eventBus'          : 'org.greenrobot:eventbus:'+cfgs.eventBus,
+            'butterknife'       : "com.jakewharton:butterknife:${cfgs.butterknife}",
+
+            'rxjava2'           : 'io.reactivex.rxjava2:rxjava:'+cfgs.rxjava_version,
+            'rxAndroid2'        : 'io.reactivex.rxjava2:rxandroid:'+cfgs.rxjava_version,
+
+            "retrofit2"         : "com.squareup.retrofit2:retrofit:${cfgs.retrofit_version}",
+            "retrofit2-gson"    : "com.squareup.retrofit2:converter-gson:${cfgs.retrofit_version}",
+            "retrofit2-rxjava"  : "com.squareup.retrofit2:adapter-rxjava2:${cfgs.retrofit_version}",
+
+            'recycleView'       : "com.android.support:recyclerview-v7:${cfgs.androidSupportVersion}",
+            "spt-v7"            : "com.android.support:appcompat-v7:${cfgs.androidSupportVersion}",
+            "cardview"          : "com.android.support:cardview-v7:${cfgs.androidSupportVersion}",
+            "md"                : "com.android.support:design:${cfgs.androidSupportVersion}",
+            "rxlfCycle"         : "com.trello.rxlifecycle2:rxlifecycle:"+cfgs.rxlife_version,
+            "rxlfCycle-cpnts"   : "com.trello.rxlifecycle2:rxlifecycle-components:"+cfgs.rxlife_version,
+            "gson"              : "com.google.code.gson:gson:${cfgs.gson}",
+            "pull2refresh"      : "in.srain.cube:ptr-load-more:${cfgs.ultraPtr}",
+            "slideTab"          : "com.github.hackware1993:MagicIndicator:${cfgs.slideTab}"
+    ]
+
+}

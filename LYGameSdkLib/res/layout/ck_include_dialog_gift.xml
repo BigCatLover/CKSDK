@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/ck_bg_edit_two"
+        android:layout_marginRight="@dimen/ckgame_activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/ckgame_activity_horizontal_margin"
+        android:layout_centerInParent="true"
+        android:layout_height="200dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/title_ll"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:id="@+id/title"
+                android:text="title"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textColor="@color/ck_black"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/close"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ck_cancle"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <View
+            android:layout_below="@+id/title_ll"
+            android:id="@+id/split"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:background="@color/ck_line_gray"
+            android:layout_height="0.5dp">
+        </View>
+        <ListView
+            android:layout_below="@+id/split"
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:divider="#00000000"
+            android:listSelector="@android:color/transparent"
+            android:dividerHeight="0dip"
+            android:layout_height="match_parent">
+        </ListView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

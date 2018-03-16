@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:background="@drawable/ck_bg_edit_two"
+        android:layout_width="320dp"
+        android:layout_height="240dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/iv_return"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:padding="10dp"
+            android:src="@drawable/ck_return"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:id="@+id/fast_regist_title"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_height="21dp">
+            <ImageView
+                android:layout_alignParentLeft="true"
+                android:id="@+id/left"
+                android:src="@drawable/ck_bg_left"
+                android:layout_width="33dp"
+                android:layout_centerVertical="true"
+                android:layout_height="2dp" />
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ck_bg_right"
+                android:id="@+id/right"
+                android:layout_centerVertical="true"
+                android:layout_width="33dp"
+                android:layout_height="2dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/ck_green"
+                android:layout_toLeftOf="@id/right"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:id="@+id/title"
+                android:layout_toRightOf="@id/left"
+                android:text="@string/ck_fast_regist"
+                android:textSize="16dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@+id/fast_regist_title"
+            android:layout_width="match_parent"
+            android:id="@+id/account_ll"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_height="30dp">
+            <EditText
+                android:id="@+id/fastregist_acountname"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@null"
+                android:hint="@string/ck_input_phone"
+                android:maxLength="16"
+                android:textColor="@color/ck_text_black"
+                android:textColorHint="@color/ck_text_hint"
+                android:textSize="14dp" />
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ck_delete"
+                android:id="@+id/phone_dele"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:visibility="gone"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <View
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/account_ll"
+            android:layout_width="match_parent"
+            android:background="@color/ck_line_gray"
+            android:id="@+id/split"
+            android:layout_height="1dp"/>
+
+        <RelativeLayout
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/yzm_ll"
+            android:layout_below="@+id/split"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <EditText
+                android:maxLength="12"
+                android:textSize="14dp"
+                android:textColor="@color/ck_text_black"
+                android:layout_width="match_parent"
+                android:hint="@string/ck_input_tip"
+                android:id="@+id/fastregist_code"
+                android:textColorHint="@color/ck_text_hint"
+                android:background="@null"
+                android:layout_height="30dp" />
+            <TextView
+                android:text="@string/ck_getcode"
+                android:textSize="10dp"
+                android:gravity="center"
+                android:id="@+id/getcode"
+                android:background="@drawable/ck_sdk_green_bg"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/ck_white"
+                android:layout_width="80dp"
+                android:layout_height="20dp" />
+            <ImageView
+                android:layout_width="35dp"
+                android:id="@+id/code_dele"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ck_delete"
+                android:layout_toLeftOf="@+id/getcode"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <View
+            android:layout_below="@+id/yzm_ll"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:id="@+id/split1"
+            android:background="@color/ck_line_gray"
+            android:layout_height="1dp"/>
+        <RelativeLayout
+            android:layout_below="@+id/split1"
+            android:id="@+id/pass_ll"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <EditText
+                android:maxLength="16"
+                android:textSize="14dp"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:id="@+id/password"
+                android:inputType="textPassword"
+                android:hint="@string/ck_pass_tip1"
+                android:textColorHint="@color/ck_text_hint"
+                android:textColor="@color/ck_text_black"
+                android:layout_height="30dp" />
+            <CheckBox
+                android:id="@+id/eye"
+                android:layout_alignParentRight="true"
+                android:layout_width="19dp"
+                android:button="@null"
+                android:layout_marginRight="5dp"
+                android:layout_height="12dp"
+                android:background="@drawable/ck_selector_eyes"
+                android:layout_centerInParent="true" />
+            <ImageView
+                android:layout_width="35dp"
+                android:src="@drawable/ck_delete"
+                android:visibility="gone"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_toLeftOf="@+id/eye"
+                android:id="@+id/pass_dele"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+        <View
+            android:layout_below="@+id/pass_ll"
+            android:id="@+id/split2"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:background="@color/ck_line_gray"
+            android:layout_height="1dp"/>
+        <RelativeLayout
+            android:layout_below="@+id/split2"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/agreen_ll"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="12dp">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:id="@+id/check"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ck_default_check"
+                android:layout_height="12dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="10dp"
+                android:id="@+id/agree"
+                android:layout_toRightOf="@id/check"
+                android:text="@string/ck_agree_protocol"
+                android:textColor="@color/ck_text_hint"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <TextView
+            android:layout_below="@+id/agreen_ll"
+            android:layout_width="match_parent"
+            android:text="@string/ck_yes"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/next"
+            android:textColor="@color/ck_white"
+            android:background="@drawable/ck_sdk_green_bg"
+            android:layout_height="30dp" />
+        <RelativeLayout
+            android:layout_below="@+id/next"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="8dp"
+            android:id="@+id/other_regist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/other_text"
+                android:layout_centerInParent="true"
+                android:layout_width="90dp"
+                android:textSize="13dp"
+                android:gravity="center"
+                android:text="@string/ck_other_registwag"
+                android:textColor="@color/ck_green1"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="8dp"
+                android:src="@drawable/ck_other_login"
+                android:layout_toRightOf="@+id/other_text"
+                android:layout_centerInParent="true"
+                android:layout_height="8.5dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

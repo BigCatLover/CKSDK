@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="218dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/ck_bg_edit_two">
+
+        <RelativeLayout
+            android:id="@+id/account_title"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/accountname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:gravity="center"
+                android:text="游客:12951111111"
+                android:textColor="@color/ck_green"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/left"
+                android:layout_width="43dp"
+                android:layout_height="2dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@id/accountname"
+                android:src="@drawable/ck_bg_left" />
+
+            <ImageView
+                android:id="@id/right"
+                android:layout_width="43dp"
+                android:layout_height="2dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dp"
+                android:layout_toRightOf="@id/accountname"
+                android:src="@drawable/ck_bg_right" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/account_title"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/ck_welcome_again"
+            android:textColor="@color/ck_green"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/binding_tip"
+            android:layout_width="186dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/welcome"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/ck_upgrade_tip"
+            android:textColor="@color/ck_text_black"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/upgrade_now"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@+id/binding_tip"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ck_sdk_green_bg"
+            android:gravity="center"
+            android:text="@string/ck_upgrade_now"
+            android:textColor="@color/ck_white"
+            android:textSize="16dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/upgrade_now"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp">
+
+            <TextView
+                android:id="@+id/change_acount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/ck_switch_account"
+                android:textColor="@color/ck_green"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/entergame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/ck_enter_now"
+                android:textColor="@color/ck_green"
+                android:textSize="14dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

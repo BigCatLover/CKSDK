@@ -1,0 +1,11 @@
+<resources>
+    <!--<string name="app_name">火速SDK竖屏版</string>-->
+    <string name="a_0183">我们需要获取存储空间，为您存储个人信息，否则您将无法正行使用查客游戏中心</string>
+    <string name="a_0184">请允许获取存储空间</string>
+    <string name="a_0185">我们需要获取相册，为您提供拍照功能，否则您将无法正行使用查客游戏中心</string>
+    <string name="a_0186">请允许获取相册</string>
+    <string name="a_0133">是</string>
+    <string name="a_0134">否</string>
+    <string name="a_0181">我们需要获取设备信息，为您进行设备识别；否则您将无法正常使用查客游戏中心</string>
+    <string name="a_0182">请允许获取设备信息</string>
+</resources>

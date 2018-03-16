@@ -1,0 +1,19 @@
+android {
+    productFlavors {
+        "portrait_SDK" {
+            applicationId "com.game.sdk.jingyue163portrait"
+            versionCode 7
+            resValue("string", "app_name", "捞月狗demo竖屏版")
+        }
+        "landscape_SDK" {
+            applicationId "com.game.sdk.cklandscape"
+            versionCode 7
+            resValue("string", "app_name", "查客demo横屏版")
+        }
+        "pay_SDK" {
+            applicationId "mytest.zl.com.paytest"
+            versionCode 7
+            resValue("string", "app_name", "测试支付demo")
+        }
+    }
+}

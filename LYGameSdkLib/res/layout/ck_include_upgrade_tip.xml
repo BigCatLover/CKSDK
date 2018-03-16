@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:layout_width="290dp"
+        android:layout_height="147dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/ck_bg_edit_two">
+
+        <RelativeLayout
+            android:id="@+id/account_title"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:id="@+id/accountname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:gravity="center"
+                android:text="游客:12951111111"
+                android:textColor="@color/ck_green"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/left"
+                android:layout_width="43dp"
+                android:layout_height="2dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@id/accountname"
+                android:src="@drawable/ck_bg_left" />
+
+            <ImageView
+                android:id="@id/right"
+                android:layout_width="43dp"
+                android:layout_height="2dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dp"
+                android:layout_toRightOf="@id/accountname"
+                android:src="@drawable/ck_bg_right" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="215dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/account_title"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/ck_visitor_paytip"
+            android:textColor="@color/ck_text_black"
+            android:textSize="14dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tip"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp">
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/ck_sdk_green_bg"
+                android:gravity="center"
+                android:text="@string/ck_cancle"
+                android:textColor="@color/ck_white"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ck_sdk_green_bg"
+                android:gravity="center"
+                android:text="@string/ck_goto_upgrade"
+                android:textColor="@color/ck_white"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

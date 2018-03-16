@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.etsdk.sdkdemo">
+    <!-- 竖屏清单文件请在src/portrait_SDK目录中查看 -->
+    <!-- 横屏清单文件请在src/landscape_SDK目录中查看 -->
+    <application></application>
+
+</manifest>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:background="@drawable/ck_bg_edit_two"
+        android:layout_width="322dp"
+        android:layout_height="215dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/iv_return"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:padding="10dp"
+            android:src="@drawable/ck_return"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/login_title"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_height="21dp">
+            <ImageView
+                android:layout_alignParentLeft="true"
+                android:id="@+id/left"
+                android:src="@drawable/ck_bg_left"
+                android:layout_width="33dp"
+                android:layout_centerVertical="true"
+                android:layout_height="2dp" />
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ck_bg_right"
+                android:id="@+id/right"
+                android:layout_centerVertical="true"
+                android:layout_width="33dp"
+                android:layout_height="2dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/ck_green"
+                android:layout_toLeftOf="@id/right"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:id="@+id/title"
+                android:layout_toRightOf="@id/left"
+                android:text="@string/ck_account_login"
+                android:textSize="16dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@+id/login_title"
+            android:id="@+id/account_ll"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="32dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:textSize="14dp"
+                android:id="@+id/acountname"
+                android:textColor="@color/ck_text_black"
+                android:background="@null"
+                android:maxLength="16"
+                android:hint="@string/ck_account_tip"
+                android:textColorHint="@color/ck_text_hint"
+                android:layout_height="32dp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/iv_more"
+                android:src="@drawable/ck_bottom"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:paddingRight="10dp"
+                android:visibility="gone"
+                android:paddingLeft="10dp"
+                android:id="@+id/account_dele"
+                android:src="@drawable/ck_delete"
+                android:layout_toLeftOf="@+id/iv_more"
+                android:layout_centerInParent="true"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+        <View
+            android:layout_below="@+id/account_ll"
+            android:id="@+id/split"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:background="@color/ck_line_gray"
+            android:layout_height="1dp"/>
+
+        <RelativeLayout
+            android:layout_below="@+id/split"
+            android:id="@+id/pass_ll"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="32dp">
+            <EditText
+                android:maxLength="16"
+                android:textSize="14dp"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:id="@+id/password"
+                android:inputType="textPassword"
+                android:hint="@string/ck_pass_tip"
+                android:textColorHint="@color/ck_text_hint"
+                android:textColor="@color/ck_text_black"
+                android:layout_marginRight="20dp"
+                android:layout_height="32dp" />
+            <CheckBox
+                android:id="@+id/pass_eye"
+                android:layout_alignParentRight="true"
+                android:layout_width="19dp"
+                android:layout_height="12dp"
+                android:layout_marginRight="5dp"
+                android:button="@null"
+                android:background="@drawable/ck_selector_eyes"
+                android:layout_centerInParent="true" />
+            <ImageView
+                android:layout_width="34dp"
+                android:id="@+id/pass_dele"
+                android:paddingLeft="10dp"
+                android:visibility="gone"
+                android:paddingRight="10dp"
+                android:layout_marginRight="7dp"
+                android:layout_toLeftOf="@+id/pass_eye"
+                android:src="@drawable/ck_delete"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <View
+            android:layout_below="@+id/pass_ll"
+            android:id="@+id/split1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:background="@color/ck_line_gray"
+            android:layout_height="1dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:text="@string/ck_login_now"
+            android:textSize="16dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:id="@+id/commit"
+            android:textColor="@color/ck_white"
+            android:background="@drawable/ck_sdk_green_bg"
+            android:layout_height="32dp"
+            android:layout_below="@+id/split1"
+            android:layout_centerHorizontal="true" />
+        <RelativeLayout
+            android:layout_below="@+id/commit"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:text="@string/ck_visitor_login1"
+                android:id="@+id/visitor_login"
+                android:textColor="@color/ck_green"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="14dp"
+                android:id="@+id/find_password"
+                android:gravity="center"
+                android:text="@string/ck_find_password"
+                android:textColor="@color/ck_green"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+android {
+	 productFlavors {
+	 	 "portrait_SDK" {
+	 	 	 applicationId "com.game.sdk.jingyue163portrait"
+	 	 	 versionCode 7
+	 	 	 resValue( "string", "app_name", "捞月狗demo竖屏版" )
+	 	 }
+	 	 "landscape_SDK" {
+	 	 	 applicationId "com.game.sdk.jingyue163landscape"
+	 	 	 versionCode 7
+	 	 	 resValue( "string", "app_name", "捞月狗demo横屏版" )
+	 	 }
+	 }
+}

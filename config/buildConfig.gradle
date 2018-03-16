@@ -1,0 +1,87 @@
+//构建类型
+//通过apply from '路径'
+// 在别的gradle中引入，会替换对应的配置
+//如果在宿主gradle中有配置某一属性是覆盖不了的
+ext {
+    //Get cp code from assets/cp;
+    Properties prop = new Properties();
+    FileInputStream fileInputStream = new FileInputStream(file('../local.properties'));
+    DataInputStream dInput = new DataInputStream(fileInputStream);
+    prop.load(dInput);
+    //def appKey = prop.getProperty("umeng.AppKey")
+    def storePasswordStr = prop.getProperty("storePassword");
+    def keyAliasStr = prop.getProperty("keyAlias");
+    def keyPasswordStr = prop.getProperty("keyPassword")
+
+
+    android {
+        //为了解决部分第三方库重复打包了META-INF的问题
+        packagingOptions {
+            exclude 'META-INF/LICENSE.txt'
+            exclude 'META-INF/NOTICE.txt'
+        }
+
+        //移除lint检测的error
+        lintOptions {
+            abortOnError false
+            checkReleaseBuilds false
+        }
+
+        //签名信息
+        signingConfigs {
+            releaseConfig {
+                keyAlias keyAliasStr
+                keyPassword keyPasswordStr
+                storeFile file('../config/key/huoapp_key.jks')
+                storePassword storePasswordStr
+            }
+        }
+
+        buildTypes {
+            debug {
+                buildConfigField("boolean", "LOG_DEBUG", "true")
+                minifyEnabled false
+                signingConfig signingConfigs.releaseConfig
+
+            }
+            release {
+                buildConfigField("boolean", "LOG_DEBUG", "false")
+                minifyEnabled true
+                zipAlignEnabled true
+                //移除无用的resource文件
+                shrinkResources true
+                proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+                signingConfig signingConfigs.releaseConfig
+                // 批量打包
+                applicationVariants.all { variant ->
+                    variant.outputs.each { output ->
+                        def outputFile = output.outputFile
+                        //println output.outputFile
+                        def packageType = outputFile.name.endsWith("debug.apk")?"debug":"release"
+                        if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                            //输出apk名称为：渠道名_版本名_时间.apk
+                            def fileName = "${variant.productFlavors[0].name}_" +
+                                    //版本信息
+                                    "v${defaultConfig.versionName}_" +
+                                    //版本号
+                                    "${defaultConfig.versionCode}_" +
+                                    //打包时间
+                                    "${releaseTime()}_${packageType}.apk"
+                            String outputsPath = outputFile.parent.substring(0, outputFile.parent.indexOf("apk"));
+                            //outputs+渠道名 组成的目录
+                            File newOutfileDir = new File(outputsPath, "${variant.productFlavors[0].name}");
+                            //apk位置 outputs/渠道名/xxx.apk
+                            output.outputFile = new File(newOutfileDir, fileName);
+                            //println output.outputFile
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}

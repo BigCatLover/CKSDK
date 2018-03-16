@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="18dp"
+            android:text="选择游戏："
+            android:textColor="@color/ck_black"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/gamelist"
+            android:layout_height="wrap_content">
+        </Spinner>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:text="请输入需要注册的账号数以及活跃百分比，后续初始化后会从这些账号中随机取一个进行登录"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="注册数:"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/regstcnt"
+            android:numeric="integer"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="活跃百分比:"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:numeric="integer"
+            android:id="@+id/mau"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text=" %"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="注册/登录"
+        android:id="@+id/regist"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/money"
+        android:hint="请输入需要支付的金额"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="match_parent"
+        android:text="支付"
+        android:id="@+id/pay"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/payinfo"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

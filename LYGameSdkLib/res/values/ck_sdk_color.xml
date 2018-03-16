@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ck_green">#19ac93</color>
+    <color name="ck_line_gray">#e3e3e3</color>
+    <color name="ck_text_black">#4a4a4a</color>
+    <color name="ck_text_hint">#b3b9c2</color>
+    <color name="ck_white">#ffffff</color>
+    <color name="ck_green2">#19ab92</color>
+    <color name="ck_green1">#1fc9ab</color>
+    <color name="ck_red">#ff6e6a</color>
+    <color name="ck_gray">#f9f9f9</color>
+    <color name="ck_gray1">#999999</color>
+    <color name="ck_black">#ff000000</color>
+    <color name="ck_gray_line">#DBD7D7</color>
+    <color name="ck_text">#9b9b9b</color>
+    <color name="ck_dialog_bg">#D8D8D8</color>
+    <color name="ck_line_blue">#21A6EF</color>
+</resources>

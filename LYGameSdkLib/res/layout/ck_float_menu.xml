@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="40dp"
+    android:layout_width="wrap_content"
+    android:background="@drawable/ck_float_bg_right">
+    <RelativeLayout
+        android:id="@+id/lyg_float_item_user"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="20dp"
+            android:maxWidth="20dp"
+            android:adjustViewBounds="true"
+            android:id="@+id/user"
+            android:src="@drawable/ck_float_user"/>
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ck_btn_user"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/user"
+            android:textColor="#ffffff"
+            android:textSize="8dp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_toRightOf="@+id/lyg_float_item_user"
+        android:id="@+id/split"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:background="@color/ck_white"
+        android:layout_height="40dp"/>
+
+    <RelativeLayout
+        android:layout_toRightOf="@+id/split"
+        android:id="@+id/lyg_float_item_identify"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:id="@+id/identity"
+            android:maxHeight="20dp"
+            android:maxWidth="20dp"
+            android:src="@drawable/ck_float_identity"/>
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/identity"
+            android:layout_centerInParent="true"
+            android:text="@string/ck_btn_identify"
+            android:textColor="#ffffff"
+            android:textSize="8dp"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+apply from: "../config/buildConfig.gradle"
+apply from: "../config/productFlavorsConfig.gradle"
+
+android {
+    compileSdkVersion cfgs.compileSdkVersion
+    buildToolsVersion cfgs.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion cfgs.minSdkVersion
+        targetSdkVersion cfgs.targetSdkVersion
+        applicationId cfgs.applicationId
+        versionCode cfgs.versionCode
+        versionName cfgs.versionName
+        multiDexEnabled true
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':LYGameSdkLib')
+}

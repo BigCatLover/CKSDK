@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/lyg_sdk_rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@color/ck_green">
+
+        <ImageView
+            android:id="@+id/lyg_sdk_iv_return"
+            android:layout_width="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ck_sdk_float_ic_back"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/lyg_sdk_tv_charge_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/ck_usercenter"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/lyg_sdk_rl_top"
+        android:layout_height="match_parent">
+        <WebView
+            android:id="@+id/lyg_sdk_pay_webview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <WebView
+            android:id="@+id/lyg_sdk_pay_wx"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+</RelativeLayout>
+

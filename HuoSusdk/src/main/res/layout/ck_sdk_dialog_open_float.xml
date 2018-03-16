@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="6dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ck_shape_circle_rect_white">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/tv_hint"
+            android:text="温馨提示"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:layout_below="@+id/tv_hint"
+            android:layout_marginTop="10dp"
+            android:id="@+id/lyg_sdk_content_text"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/ck_openfloat_tip"
+            android:textColor="#666666"
+            android:textSize="12sp" />
+
+        <View android:background="#eeeeee"
+            android:layout_below="@+id/lyg_sdk_content_text"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:id="@+id/split1"
+            android:layout_marginTop="10dp"></View>
+
+        <RelativeLayout
+            android:layout_below="@+id/split1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/lyg_sdk_cancel_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/split"
+                android:gravity="center"
+                android:text="@string/ck_cancle"
+                android:textColor="#666666" />
+            <View
+                android:layout_width="0.8dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:id="@+id/split"
+                android:background="#eeeeee"></View>
+            <TextView
+                android:id="@+id/lyg_sdk_confirm_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/split"
+                android:gravity="center"
+                android:text="@string/ck_open_float"
+                android:textColor="#77CA51"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

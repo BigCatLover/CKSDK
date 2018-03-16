@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="550dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/ck_ad_dialog_bg"
+        android:layout_height="307dp">
+        <ListView
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="6dp"
+            android:layout_alignParentLeft="true"
+            android:layout_width="130dp"
+            android:id="@+id/title_recycleview"
+            android:layout_height="match_parent">
+        </ListView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_toRightOf="@+id/title_recycleview"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_alignParentTop="true"
+                android:id="@+id/ad_title"
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/title"
+                    android:gravity="center"
+                    android:text="标题"
+                    android:layout_centerInParent="true"
+                    android:shadowDy="10"
+                    android:shadowRadius="3"
+                    android:shadowDx="5"
+                    android:shadowColor="@color/ck_black"
+                    android:textColor="@color/ck_white"
+                    android:textSize="16dp"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:id="@+id/close1"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ck_ad_close"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+            <ImageView
+                android:layout_below="@+id/ad_title"
+                android:layout_above="@+id/check_detail"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/image_more"
+                android:layout_marginRight="6dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="@string/ck_checkfordetail"
+                android:shadowDy="10"
+                android:shadowRadius="3"
+                android:shadowDx="5"
+                android:id="@+id/check_detail"
+                android:shadowColor="@color/ck_black"
+                android:textColor="@color/ck_white"
+                android:textSize="16dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/ck_ad_btn"
+                android:layout_marginTop="3dp"
+                android:layout_height="30dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

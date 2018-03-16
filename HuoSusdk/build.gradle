@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion cfgs.compileSdkVersion
+    buildToolsVersion cfgs.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion cfgs.minSdkVersion
+        targetSdkVersion cfgs.targetSdkVersion
+        versionCode 3
+        versionName "7.1"
+    }
+
+    buildTypes {
+        libRelease {
+            minifyEnabled true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+    //移除lint检测的error
+    lintOptions {
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    /**
+     * 拷贝jar到HuoSdkLib的libs目录下
+     */
+    task copyJar(type: Copy, dependsOn: build) {
+        from("build/intermediates/bundles/libRelease/classes.jar")
+        into("../LYGameSdkLib/libs")
+        rename("classes.jar", "CKGameSdk-release-" + defaultConfig.versionName + ".jar")
+    }
+}
+dependencies {
+    provided fileTree(include: ['*.jar'], dir: 'libs')
+    compile libs['spt-v7']
+}
+
+

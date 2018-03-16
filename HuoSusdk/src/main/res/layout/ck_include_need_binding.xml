@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:background="@drawable/ck_bg_edit_two"
+        android:layout_width="282dp"
+        android:layout_height="200dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/regist_success_tip"
+            android:gravity="center"
+            android:layout_height="21dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/ck_green"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:text="@string/ck_regist_success"
+                android:id="@+id/title"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/left"
+                android:src="@drawable/ck_bg_left"
+                android:layout_width="43dp"
+                android:layout_toLeftOf="@id/title"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_height="2dp" />
+            <ImageView
+                android:id="@id/right"
+                android:layout_toRightOf="@id/title"
+                android:layout_marginRight="13dp"
+                android:src="@drawable/ck_bg_right"
+                android:layout_centerVertical="true"
+                android:layout_width="43dp"
+                android:layout_height="2dp" />
+
+        </RelativeLayout>
+        <TextView
+            android:layout_below="@+id/regist_success_tip"
+            android:layout_width="wrap_content"
+            android:textSize="16dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:text="1345667"
+            android:id="@+id/acountname"
+            android:gravity="center"
+            android:textColor="@color/ck_text_black"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_below="@+id/acountname"
+            android:layout_width="wrap_content"
+            android:textSize="16dp"
+            android:text="@string/ck_binding_tip"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:id="@+id/tip"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/ck_text_black"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_below="@+id/tip"
+            android:layout_width="match_parent"
+            android:text="@string/ck_goto_binding"
+            android:textSize="16dp"
+            android:id="@+id/goto_binding"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:gravity="center"
+            android:textColor="@color/ck_white"
+            android:background="@drawable/ck_sdk_green_bg"
+            android:layout_height="30dp" />
+        <TextView
+            android:layout_below="@+id/goto_binding"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/ck_green2"
+            android:textSize="12dp"
+            android:layout_marginTop="8dp"
+            android:id="@+id/no_binding"
+            android:text="@string/ck_binding_cancle"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

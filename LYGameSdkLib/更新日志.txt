@@ -1,0 +1,66 @@
+2017.3.13
+更新内容
+    更新账号切换改为退出切换和规范资源命名
+	涉及文件：HuoSusdk-release-7.0.jar，所有的资源文件
+    是否必须更新：否
+    替换整个HuoSdkLib
+
+2017.2.13
+更新内容
+    修复部分平板由于获取不到设备号出现的非法请求问题
+	涉及文件：HuoSusdk-release-7.0.jar
+    是否必须更新：是
+    直接替换HuoSdkLib/libs目录下的HuoSusdk-release-7.0.jar
+
+2016.12.26
+更新内容：
+    浮点内网页非用户中心页面直接返回到用户中心，用户中心页面直接关闭
+	涉及文件：
+		HuoSusdk-release-7.0.jar
+	是否必须更新：是
+	直接替换HuoSdkLib/libs目录下的HuoSusdk-release-7.0.jar
+
+2016.12.19
+更新内容：
+	1.添加sdk分渠道包使用app包的渠道
+	2.更新浮点密码页面的返回返回不了的问题
+	
+	涉及文件：
+		HuoSusdk-release-7.0.jar
+		libhs_sdk-lib.so
+	是否必须更新：是
+	直接替换HuoSdkLib/libs目录下的HuoSusdk-release-7.0.jar和HuoSdkLib/libs/armeabi目录下的libhs_sdk-lib.so,
+	清单文件中删掉这一行设置    <meta-data android:name="HS_AGENT" android:value=""/>
+
+
+2016.12.14
+更新内容：
+	1.修复sdk中礼包复制失效问题
+	2.更新sdk一键注册显示密码
+
+涉及文件：
+	HuoSusdk-release-7.0.jar
+
+是否必须更新：是
+
+游戏方更新方法：
+	直接替换HuoSdkLib/libs目录下的HuoSusdk-release-7.0.jar即可
+
+
+
+2016.12.12
+更新内容：
+	1.更新sdk支付时对参数校验时不校验""
+	2.修复之前让游戏方多传了一个server_name重复参数的问题。
+	
+涉及文件：
+	HuoSusdk-release-7.0.jar
+	
+是否必须更新：否，对于没有出现吐司提示参数校验不过问题的游戏对接可暂时不更新。
+
+游戏方更新方法：
+	直接替换HuoSdkLib/libs目录下的HuoSusdk-release-7.0.jar即可
+	
+
+	
+
